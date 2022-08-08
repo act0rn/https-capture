@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<network-security-config>
+    <!--公钥校验-->
+    <domain-config>
+        <domain includeSubdomains="true">so.com</domain>
+        <pin-set expiration="2099-01-01">
+<!--            openssl s_client -connect so.com:443 -servername so.com | openssl x509 -pubkey -noout | openssl rsa -pubin -outform der | openssl dgst -sha256 -binary | openssl enc -base64-->
+            <pin digest="SHA-256">iIolEURRBp9YjnDXMsI5FqLCGy+PjWfwFihAjyPdwLc=</pin>
+        </pin-set>
+    </domain-config>
+
+    <!--证书校验-->
+    <domain-config>
+        <domain includeSubdomains="true">zhihu.com</domain>
+        <trust-anchors>
+<!--            openssl s_client -connect bing.com:443 -servername bing.com | openssl x509 -out bing.pem-->
+            <certificates src="@raw/zhihu"/>
+        </trust-anchors>
+    </domain-config>
+</network-security-config>

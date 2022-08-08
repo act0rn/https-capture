@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <Button
+        android:id="@+id/no_verify"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="01 Https-忽略证书校验"/>
+    <Button
+        android:id="@+id/cert_verify"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="02 Https-系统证书校验"/>
+    <Button
+        android:id="@+id/check_proxy"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="03 HTTPS-代理检测"/>
+    <Button
+        android:id="@+id/ssl_pinning"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="04 SSL-Pinning-代码校验公钥"/>
+    <Button
+        android:id="@+id/ssl_pinning2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="05 SSL-Pinning-配置文件-公钥"/>
+    <Button
+        android:id="@+id/ssl_pinning3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="06 SSL-Pinning-配置文件-证书"/>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <TextView
+            android:id="@+id/response_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+    </ScrollView>
+</LinearLayout>
